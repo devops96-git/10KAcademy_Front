@@ -1,0 +1,159 @@
+<app-header></app-header>
+<div class="home">
+
+
+
+  <div class="first-screen">
+    <div class="first-screen__title-wrapper">
+      <div class="first-screen__title">
+        Менторство
+        <br>в сфере IT
+      </div>
+    </div>
+    <div class="first-screen__sub-title-callback">
+      <div class="first-screen__sub-title">
+        Всего одно требование - Ваше желание
+        <br>Начни карьеру в IT. Найди себя в IT
+      </div>
+      <div class="first-screen__callback">
+        <app-callback-button></app-callback-button>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="owner-screen">
+
+    <div class="owner-screen__content">
+      <div class="owner-screen__title_group">
+        <div class="owner-screen__title">Основатель Академии</div>
+        <div class="owner-screen__name">Роман Головаха</div>
+        <div class="owner-screen__total_ex">
+          Основатель 10K.Academy
+          <br>14 лет в сфере IT. 12 из них работал Full-Stack программистом.
+        </div>
+        <div class="owner-screen__projects">
+          Основатель, CEO в WeSked
+          <br>Основатель, CEO в 10K Academy
+          <br>Основатель, CEO в SuperPostman
+        </div>
+    </div>
+
+
+      <div class="owner-screen__photo">
+        <img src="/assets/images/owner.jpg">
+      </div>
+
+    </div>
+
+
+    <div class="owner-screen__ex">
+      <div class="owner-screen__ex1">
+        <div class="owner-screen__ex1-12">12</div>
+        <div class="owner-screen__ex-text">
+          лет опыта - Разработчик и Архитектор
+          <br>программного обеспечения
+        </div>
+      </div>
+      <div class="owner-screen__ex2">
+        <div class="owner-screen__ex2-10">10</div>
+        <div class="owner-screen__ex-text">
+          лет опыта - Тим-лидер и
+          <br>менеджер проекта
+        </div>
+      </div>
+      <div class="owner-screen__ex3">
+        <div class="owner-screen__ex3-5">5</div>
+        <div class="owner-screen__ex-text">
+          лет опыта - Владелец IT
+          <br>компани и CTO
+        </div>
+      </div>
+    </div>
+    <div class="owner-screen__technologies">
+      Spring, Spring-Boot, NodeJS, CSS, JavaScript,
+      Express, Angular, React, GIT, Java, Jenkins, Docker,
+      SQL, MongoDB, RabbitMQ, Kafka, Hazelcast, MySql, Redis,
+      Togglz, AWS
+    </div>
+
+
+
+  </div>
+
+
+
+  <div class="faq-screen">
+
+    <div class="faq-screen__title">
+      FAQ
+    </div>
+
+    <div class="faq-screen__questions">
+      <div
+        class="faq-screen__questions-item"
+        *ngFor="let question of questions; let i = index"
+        [ngClass]="{'faq-screen__questions-item_open': question.isOpen}"
+        (click)="toggleQuestion(i)"
+      >
+        <div class="faq-screen__questions-item-title">
+          <span>{{question.title}}</span>
+          <button>+</button>
+        </div>
+        <div class="faq-screen__questions-item-text" [innerHTML]="question.text"></div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+  <div class="reviews-screen">
+
+    <div class="reviews-screen__title">ОТЗЫВЫ</div>
+    <div class="reviews-screen__rev_group">
+      <div class="reviews-screen__rev_photo">
+
+      </div>
+      <div class="reviews-screen__rev-title"></div>
+      <div class="reviews-screen__rev-company"></div>
+      <div class="reviews-screen__rev-text"></div>
+      <div class="reviews-screen__rev-navigation"></div>
+    </div>
+
+  </div>
+
+
+
+  <div class="guarantee-screen">
+
+    <div class="guarantee-screen__title"></div>
+    <div class="guarantee-screen__group">
+      <div class="guarantee-screen__access-and-job">
+        <div class="guarantee-screen__access"><div>
+        <div class="guarantee-screen__job"><div>
+      </div>
+      <div class="guarantee-screen__pay"></div>
+
+    </div>
+
+
+  </div>
+  <div class="application-screen">
+
+    <div class="application-screen__titles">
+      <div class="application-screen__title"></div>
+      <div class="application-screen__sub-title"></div>
+    </div>
+
+    <div class="application-screen__form"></div>
+
+  </div>
+  <div class="footer-screen">
+
+
+
+  </div>
+
+</div>

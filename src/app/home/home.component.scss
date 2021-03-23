@@ -1,0 +1,268 @@
+.first-screen {
+  background-image: url("/assets/images/first-screen__bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding-top: 137px;
+  padding-bottom: 282px;
+  &__title-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  &__title {
+    color: #333333;
+    font-family: Russo One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100px;
+    line-height: 120px;
+  }
+  &__sub-title-callback {
+    width: 50%;
+    margin-left: 50%;
+    padding-left: 50px;
+  }
+  &__sub-title {
+    padding-top: 58px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+
+    color: #262626;
+  }
+  &__callback {
+    margin-top: 29px;
+  }
+}
+
+
+
+.owner-screen {
+  background: #262626;
+
+  &__content {
+    display: flex;
+    padding: 80px 294px 67px 159px;
+
+  }
+
+  &__title {
+    font-family: Russo One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 64px;
+    line-height: 77px;
+    color: #FEEE67;
+  }
+
+  &__name {
+    margin-top: 80px;
+    font-family: Russo One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 58px;
+    color: #FFFFFF;
+  }
+
+  &__photo {
+    height: 416px;
+    width: 416px;
+  }
+
+  &__total_ex {
+    margin-top: 45px;
+
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+
+    color: #FFFFFF;
+  }
+
+  &__photo {
+    margin-left: 214px;
+  }
+
+  &__projects {
+    margin-top: 48px;
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+
+    color: #F9FDFE;
+  }
+
+  &__ex {
+    margin-top: 67px;
+    display: flex;
+
+    font-family: Russo One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 64px;
+    line-height: 77px;
+  }
+
+  &__ex-text {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+
+    color: #F9FDFE;
+  }
+
+  &__ex1-12 {
+    color: #DFB2F4;
+  }
+
+  &__ex2-10 {
+    color: #FEEE67;
+  }
+
+  &__ex3-5 {
+    color: #45C0A4;
+  }
+
+  &__technologies {
+    border-top: 2px solid #F9FDFE;
+    border-bottom: 2px solid #F9FDFE;
+
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 160.1%;
+    /* or 38px */
+
+    letter-spacing: 0.12em;
+
+    color: #F9FDFE;
+  }
+
+}
+
+
+
+.faq-screen {
+  display: flex;
+  padding-top: 90px;
+
+  &__title {
+    padding-left: 157px;
+    flex: 1 1 auto;
+    font-family: Russo One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 64px;
+    line-height: 1.2;
+    color: #DFB2F4;
+  }
+
+  &__questions {
+    flex: 0 0 1040px;
+
+    &-item {
+      border-top: 3px solid #262626;
+
+      &:last-child {
+        border-bottom: 3px solid #262626;
+      }
+
+      &_open {
+        background-color: #262626;
+      }
+
+      &-title {
+        position: relative;
+        padding: 35px 150px 35px 80px;
+        font-family: Russo One;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 32px;
+        line-height: 39px;
+        color: #262626;
+        cursor: pointer;
+
+        .faq-screen__questions-item_open & {
+          color: #DFB2F4;
+        }
+
+        button {
+          position: absolute;
+          display: block;
+          right: 100px;
+          top: 50%;
+          margin-top: -15px;
+          width: 31px;
+          height: 31px;
+          border: 0;
+          background-color: transparent;
+          font-size: 0;
+          color: transparent;
+          cursor: pointer;
+
+          &::before,
+          &::after {
+            position: absolute;
+            content: '';
+            display: block;
+            background-color: #262626;
+            transition: transform .3s;
+
+            .faq-screen__questions-item_open & {
+              background-color: #fff;
+            }
+          }
+          &::before {
+            top: 14px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+
+            .faq-screen__questions-item_open & {
+              transform: rotate(45deg);
+            }
+          }
+          &::after {
+            top: 0;
+            left: 14px;
+            width: 3px;
+            height: 100%;
+
+            .faq-screen__questions-item_open & {
+              transform: rotate(45deg);
+            }
+          }
+        }
+      }
+
+      &-text {
+        display: none;
+        width: 730px;
+        max-width: 100%;
+        color: #fff;
+        padding: 10px 80px 65px;
+        font-size: 22px;
+        line-height: 1.5;
+
+        p {
+          margin-bottom: 30px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+
+        .faq-screen__questions-item_open & {
+          display: block;
+        }
+      }
+    }
+  }
+}
