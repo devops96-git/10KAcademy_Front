@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Inject, OnInit} from '@angular/core';
 import { Application } from '../application';
 import { questionsList } from './question-list';
+import {L10N_LOCALE, L10nLocale} from 'angular-l10n';
 
 @Component({
   selector: 'app-home',
@@ -15,7 +16,7 @@ export class HomeComponent implements OnInit {
   };
   questions = questionsList;
 
-  constructor() { }
+  constructor(@Inject(L10N_LOCALE) public locale: L10nLocale) { }
 
   ngOnInit(): void {
   }

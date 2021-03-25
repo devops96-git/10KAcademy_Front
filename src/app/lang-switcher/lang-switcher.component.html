@@ -1,0 +1,25 @@
+<div class="language-switcher"
+     [ngClass]="{'language-switcher_opened': isLanguagesListOpened(), 'language-switcher_white': whiteStyle}"
+     #languageSwitcherElement
+>
+  <div class="language-switcher__inner">
+
+    <div class="language-switcher__current" (click)="slideToggleLanguagesList()">
+      <span>{{titleCurrentLanguage}}</span>
+      <svg width="9" height="6" viewBox="0 0 9 6" class="language-switcher__current-arrow" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 0L4.33333 6L9 0H0Z"/>
+      </svg>
+    </div>
+
+    <div class="language-switcher__list" [@toggleHeight]="toggleState">
+      <ng-template ngFor let-language [ngForOf]="l10nConfig.schema">
+        <div
+          class="language-switcher__list-item"
+          *ngIf="language['locale']['language'] !== locale.language"
+          (click)="changeLanguage(language)"
+        >{{ language['text'] }}</div>
+      </ng-template>
+    </div>
+
+  </div>
+</div>
