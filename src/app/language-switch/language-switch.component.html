@@ -1,0 +1,11 @@
+<div
+  class="language-switch"
+  [ngClass]="{'language-switch_white': whiteStyle}"
+>
+  <button
+    class="language-switch__item"
+    *ngFor="let language of languageSchema"
+    (click)="setLocale(language.locale)"
+    [ngClass]="{'language-switch__item_active': language.locale.language === locale.language}"
+  >{{language.text}}</button>
+</div>
