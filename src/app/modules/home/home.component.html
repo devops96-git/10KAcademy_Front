@@ -10,10 +10,10 @@
       </div>
     </div>
     <div class="first-screen__sub-title-callback">
-      <div class="first-screen__sub-title">
-        Всего одно требование - Ваше желание
-        <br>Начни карьеру в IT. Найди себя в IT
-      </div>
+      <div
+        class="first-screen__sub-title"
+        [innerHTML]="'home.firstScreen.subTitle' | translate:locale.language"
+      ></div>
       <div class="first-screen__callback">
         <app-callback-button></app-callback-button>
       </div>
@@ -25,20 +25,19 @@
   <div class="owner-screen">
 
     <div class="owner-screen__content">
-      <div class="owner-screen__title_group">
-        <div class="owner-screen__title">Основатель Академии</div>
-        <div class="owner-screen__name">Роман Головаха</div>
-        <div class="owner-screen__total_ex">
-          Основатель 10K.Academy
-          <br>14 лет в сфере IT. 12 из них работал Full-Stack программистом.
+      <div class="owner-screen__title-group">
+        <div class="owner-screen__title">{{'home.owner.title' | translate:locale.language}}</div>
+        <div class="owner-screen__name">{{'home.owner.name' | translate:locale.language}}</div>
+        <div
+          class="owner-screen__projects"
+          *ngIf="ownerProjects"
+        >
+          <div
+            class="owner-screen__projects-item"
+            *ngFor="let project of ownerProjects"
+          >{{project}}</div>
         </div>
-        <div class="owner-screen__projects">
-          Основатель, CEO в WeSked
-          <br>Основатель, CEO в 10K Academy
-          <br>Основатель, CEO в SuperPostman
-        </div>
-    </div>
-
+      </div>
 
       <div class="owner-screen__photo">
         <img src="/assets/images/owner.jpg">
@@ -85,15 +84,13 @@
 
   <div class="faq-screen">
 
-    <div class="faq-screen__title">
-      FAQ
-    </div>
+    <div class="faq-screen__title">{{'home.faq.title' | translate:locale.language}}</div>
 
     <div class="faq-screen__questions">
       <div
         class="faq-screen__questions-item"
         *ngFor="let question of questions; let i = index"
-        [ngClass]="{'faq-screen__questions-item_open': question.isOpen}"
+        [ngClass]="{'faq-screen__questions-item_open': question?.isOpen}"
         (click)="toggleQuestion(i)"
       >
         <div class="faq-screen__questions-item-title">

@@ -24,11 +24,11 @@ export const l10nConfig: L10nConfig = {
   keySeparator: '.',
   fallback: true,
   defaultRouting: true,
-  defaultLocale: { language: 'en', currency: 'USD' },
+  defaultLocale: { language: 'ru', currency: 'RUB' },
   schema: [
     { locale: { language: 'en', currency: 'USD' }, dir: 'ltr', text: 'ENG' },
     { locale: { language: 'ua', currency: 'UAH' }, dir: 'ltr', text: 'УКР' },
-    { locale: { language: 'ru', currency: 'UAH' }, dir: 'ltr', text: 'РУС' }
+    { locale: { language: 'ru', currency: 'RUB' }, dir: 'ltr', text: 'РУС' }
   ]
 };
 

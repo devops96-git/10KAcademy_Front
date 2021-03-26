@@ -4,11 +4,9 @@ import { FormsModule } from '@angular/forms';
 import { L10nIntlModule, L10nLoader, L10nTranslationModule } from 'angular-l10n';
 import { HttpClientModule } from '@angular/common/http';
 
+import { AppRoutingModule } from './app-routing.module';
+
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { HeaderComponent } from './header/header.component';
-import { CallbackButtonComponent } from './callback-button/callback-button.component';
-import { LanguageSwitchComponent } from './language-switch/language-switch.component';
 
 import {
   initL10n,
@@ -21,13 +19,10 @@ import {
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    HeaderComponent,
-    CallbackButtonComponent,
-    LanguageSwitchComponent,
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
     FormsModule,
     HttpClientModule,
     L10nTranslationModule.forRoot(

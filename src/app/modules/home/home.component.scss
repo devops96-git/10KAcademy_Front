@@ -43,57 +43,44 @@
 
   &__content {
     display: flex;
-    padding: 80px 294px 67px 159px;
+    justify-content: space-between;
+    padding: 80px 290px 60px 160px;
+  }
 
+  &__title-group {
   }
 
   &__title {
     font-family: Russo One;
-    font-style: normal;
-    font-weight: normal;
     font-size: 64px;
-    line-height: 77px;
     color: #FEEE67;
   }
 
   &__name {
-    margin-top: 80px;
+    padding-top: 80px;
     font-family: Russo One;
-    font-style: normal;
-    font-weight: normal;
     font-size: 48px;
-    line-height: 58px;
     color: #FFFFFF;
-  }
-
-  &__photo {
-    height: 416px;
-    width: 416px;
-  }
-
-  &__total_ex {
-    margin-top: 45px;
-
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 29px;
-
-    color: #FFFFFF;
-  }
-
-  &__photo {
-    margin-left: 214px;
+    text-align: center;
   }
 
   &__projects {
-    margin-top: 48px;
-
-    font-style: normal;
-    font-weight: normal;
-    font-size: 24px;
-    line-height: 29px;
-
+    margin-top: 70px;
+    font-size: 40px;
     color: #F9FDFE;
+
+    &-item {
+    }
+  }
+
+  &__photo {
+    flex: 0 0 446px;
+    width: 446px;
+    padding-top: 50px;
+
+    img {
+      max-width: 100%;
+    }
   }
 
   &__ex {
@@ -138,10 +125,7 @@
     font-weight: normal;
     font-size: 24px;
     line-height: 160.1%;
-    /* or 38px */
-
     letter-spacing: 0.12em;
-
     color: #F9FDFE;
   }
 
