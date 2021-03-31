@@ -39,6 +39,7 @@
 
 
 .owner-screen {
+  padding-bottom: 74px;
   background: #262626;
 
   &__content {
@@ -83,48 +84,46 @@
     }
   }
 
-  &__ex {
-    margin-top: 67px;
+  &__experience {
     display: flex;
+    justify-content: space-between;
+    padding: 30px 220px 60px;
 
-    font-family: Russo One;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 64px;
-    line-height: 77px;
-  }
+    &-item {
+      padding: 0 20px;
+      font-family: Russo One;
+      color: #F9FDFE;
 
-  &__ex-text {
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 24px;
-    line-height: 29px;
+      &-years {
+        margin-right: 5px;
+        font-size: 64px;
+        line-height: 26px;
 
-    color: #F9FDFE;
-  }
+        .owner-screen__experience-item:nth-child(1) & {
+          color: #DFB2F4;
+        }
+        .owner-screen__experience-item:nth-child(2) & {
+          color: #FEEE67;
+        }
+        .owner-screen__experience-item:nth-child(3) & {
+          color: #45C0A4;
+        }
+      }
 
-  &__ex1-12 {
-    color: #DFB2F4;
-  }
-
-  &__ex2-10 {
-    color: #FEEE67;
-  }
-
-  &__ex3-5 {
-    color: #45C0A4;
+      &-actions {
+        font-family: Roboto;
+        font-size: 22px;
+        line-height: 26px;
+      }
+    }
   }
 
   &__technologies {
+    padding: 15px 0px;
     border-top: 2px solid #F9FDFE;
     border-bottom: 2px solid #F9FDFE;
-
     font-family: Manrope;
-    font-style: normal;
-    font-weight: normal;
     font-size: 24px;
-    line-height: 160.1%;
     letter-spacing: 0.12em;
     color: #F9FDFE;
   }
@@ -135,7 +134,7 @@
 
 .faq-screen {
   display: flex;
-  padding-top: 90px;
+  padding: 90px 0;
 
   &__title {
     padding-left: 157px;
@@ -248,5 +247,21 @@
         }
       }
     }
+  }
+}
+
+
+
+.reviews {
+  padding-top: 95px;
+  padding-bottom: 85px;
+  background-color: #FEEE67;
+
+  &__title {
+    padding-left: 160px;
+    padding-right: 30px;
+    font-family: Russo One;
+    font-size: 64px;
+    color: #262626;
   }
 }

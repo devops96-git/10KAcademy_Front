@@ -8,6 +8,7 @@ import { HomeComponent } from './home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { CallbackButtonComponent } from './components/callback-button/callback-button.component';
 import { LanguageSwitchComponent } from './components/language-switch/language-switch.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 
@@ -16,7 +17,8 @@ import { LanguageSwitchComponent } from './components/language-switch/language-s
     HomeComponent,
     HeaderComponent,
     CallbackButtonComponent,
-    LanguageSwitchComponent
+    LanguageSwitchComponent,
+    FooterComponent
   ],
   imports: [
     CommonModule,

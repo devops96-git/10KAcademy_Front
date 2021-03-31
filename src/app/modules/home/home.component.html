@@ -46,27 +46,13 @@
     </div>
 
 
-    <div class="owner-screen__ex">
-      <div class="owner-screen__ex1">
-        <div class="owner-screen__ex1-12">12</div>
-        <div class="owner-screen__ex-text">
-          лет опыта - Разработчик и Архитектор
-          <br>программного обеспечения
-        </div>
-      </div>
-      <div class="owner-screen__ex2">
-        <div class="owner-screen__ex2-10">10</div>
-        <div class="owner-screen__ex-text">
-          лет опыта - Тим-лидер и
-          <br>менеджер проекта
-        </div>
-      </div>
-      <div class="owner-screen__ex3">
-        <div class="owner-screen__ex3-5">5</div>
-        <div class="owner-screen__ex-text">
-          лет опыта - Владелец IT
-          <br>компани и CTO
-        </div>
+    <div class="owner-screen__experience">
+      <div
+        class="owner-screen__experience-item"
+        *ngFor="let exp of ownerExperience"
+      >
+        <span class="owner-screen__experience-item-years">{{exp.years}}</span>
+        <span class="owner-screen__experience-item-actions" [innerHTML]="exp.actions"></span>
       </div>
     </div>
     <div class="owner-screen__technologies">
@@ -105,51 +91,13 @@
 
 
 
-  <div class="reviews-screen">
-
-    <div class="reviews-screen__title">ОТЗЫВЫ</div>
-    <div class="reviews-screen__rev_group">
-      <div class="reviews-screen__rev_photo">
-
-      </div>
-      <div class="reviews-screen__rev-title"></div>
-      <div class="reviews-screen__rev-company"></div>
-      <div class="reviews-screen__rev-text"></div>
-      <div class="reviews-screen__rev-navigation"></div>
-    </div>
-
+  <div class="reviews">
+    <div class="reviews__title">{{'home.reviews.title' | translate:locale.language}}</div>
   </div>
 
 
-
-  <div class="guarantee-screen">
-
-    <div class="guarantee-screen__title"></div>
-    <div class="guarantee-screen__group">
-      <div class="guarantee-screen__access-and-job">
-        <div class="guarantee-screen__access"><div>
-        <div class="guarantee-screen__job"><div>
-      </div>
-      <div class="guarantee-screen__pay"></div>
-
-    </div>
-
-
-  </div>
-  <div class="application-screen">
-
-    <div class="application-screen__titles">
-      <div class="application-screen__title"></div>
-      <div class="application-screen__sub-title"></div>
-    </div>
-
-    <div class="application-screen__form"></div>
-
-  </div>
-  <div class="footer-screen">
-
-
-
-  </div>
 
 </div>
+
+
+<app-footer></app-footer>
