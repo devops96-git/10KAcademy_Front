@@ -97,6 +97,126 @@
 
 
 
+  <div class="payment">
+
+    <div class="payment__title">{{'home.payment.title' | translate:locale.language}}</div>
+
+    <div class="payment__content">
+
+      <div class="payment__content-item payment__content-item_materials">
+        <div
+          class="payment__content-item-title"
+          [innerHTML]="'home.payment.materials.title' | translate:locale.language"
+        ></div>
+        <div
+          class="payment__content-item-text"
+          [innerHTML]="'home.payment.materials.text' | translate:locale.language"
+        ></div>
+      </div>
+      <div class="payment__content-item payment__content-item_employment">
+        <div
+          class="payment__content-item-title"
+          [innerHTML]="'home.payment.employment.title' | translate:locale.language"
+        ></div>
+        <div
+          class="payment__content-item-text"
+          [innerHTML]="'home.payment.employment.text' | translate:locale.language"
+        ></div>
+      </div>
+      <div class="payment__content-item">
+        <div
+          class="payment__content-item-title"
+          [innerHTML]="'home.payment.cost.title' | translate:locale.language"
+        ></div>
+        <div class="payment__content-item-text payment__content-item-text_with-button">
+          <div
+            class="payment__content-item-text-inner"
+            [innerHTML]="'home.payment.cost.text' | translate:locale.language"
+          ><span></span></div>
+          <div class="payment__content-item-text-button">
+            <button class="button">{{'home.payment.cost.button' | translate:locale.language}}</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="consultation">
+    <div class="consultation__title">{{'home.consultation.title' | translate:locale.language}}</div>
+    <div class="consultation__content">
+      <div
+        class="consultation__text"
+        [innerHTML]="'home.consultation.text' | translate:locale.language"
+      ></div>
+      <div class="consultation__form">
+        <form [formGroup]="consultationForm" (submit)="submitConsultationForm()">
+          <div class="consultation__form-input">
+            <label
+              for="consultation-name"
+            >{{'home.consultation.form.name.label' | translate:locale.language}}</label>
+            <input
+              formControlName="name"
+              id="consultation-name"
+              type="text"
+              class="input"
+            >
+          </div>
+          <div class="consultation__form-input">
+            <label
+              for="consultation-phone"
+            >{{'home.consultation.form.phone.label' | translate:locale.language}}</label>
+            <input
+              formControlName="phone"
+              id="consultation-phone"
+              type="text"
+              class="input"
+            >
+          </div>
+          <div class="consultation__form-input">
+            <label
+              for="consultation-email"
+            >{{'home.consultation.form.email.label' | translate:locale.language}}</label>
+            <input
+              formControlName="email"
+              id="consultation-email"
+              type="text"
+              class="input"
+            >
+          </div>
+          <div class="consultation__form-input">
+            <label
+              for="consultation-specialty"
+            >{{'home.consultation.form.specialty.label' | translate:locale.language}}</label>
+            <ng-select
+              formControlName="specialty"
+              id="consultation-specialty"
+              class="select"
+              [items]="specialtyOptions"
+              bindLabel="name"
+              bindValue="id"
+            ></ng-select>
+<!--            <input-->
+<!--              id="consultation-specialty"-->
+<!--              type="text"-->
+<!--              class="input"-->
+<!--            >-->
+          </div>
+          <div class="consultation__form-button">
+            <button
+              class="button"
+            >{{'home.consultation.form.submit' | translate:locale.language}}</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+
 </div>
 
 

@@ -265,3 +265,120 @@
     color: #262626;
   }
 }
+
+
+
+.payment {
+  padding-top: 90px;
+  padding-bottom: 110px;
+
+  &__title {
+    padding-left: 160px;
+    padding-right: 30px;
+    font-family: Russo One;
+    font-size: 64px;
+    color: #45C0A4;
+    text-transform: uppercase;
+  }
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    width: 800px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: 200px;
+    padding-top: 85px;
+
+    &-item {
+      padding: 10px 20px;
+
+      &-title {
+        font-family: Russo One;
+        font-size: 32px;
+        color: #262626;
+
+        &::ng-deep {
+          span {
+            color: #45C0A4;
+          }
+        }
+      }
+
+      &-text {
+        padding-top: 15px;
+        font-family: Roboto;
+
+        &-inner {
+          flex: 0 0 50%;
+        }
+
+        &-button {
+          flex: 0 0 50%;
+          text-align: right;
+        }
+
+        &_with-button {
+          display: flex;
+          align-items: center;
+        }
+      }
+
+      &_materials {
+        flex: 0 0 350px;
+      }
+
+      &_employment {
+        flex: 0 0 450px;
+      }
+    }
+  }
+}
+
+
+
+.consultation {
+  padding: 90px 320px 80px 160px;
+  background-color: #DFB2F4;
+
+  &__title {
+    padding-right: 30px;
+    font-family: Russo One;
+    font-size: 64px;
+    color: #262626;
+    text-transform: uppercase;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 60px;
+  }
+
+  &__text {
+    font-size: 26px;
+    padding-right: 30px;
+  }
+
+  &__form {
+    flex: 0 0 480px;
+    width: 480px;
+
+    &-input {
+      padding-bottom: 20px;
+
+      label {
+        display: block;
+        padding-bottom: 10px;
+      }
+    }
+
+    &-button {
+      padding-top: 10px;
+
+      .button {
+        width: 100%;
+      }
+    }
+  }
+}

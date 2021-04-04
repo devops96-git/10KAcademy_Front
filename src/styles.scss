@@ -1,15 +1,78 @@
+@import "~@ng-select/ng-select/themes/default.theme.css";
 @import 'assets/scss/normalize';
 
 .button {
   border: 0;
   background: #262626;
-
   font-family: Russo One;
   font-style: normal;
   font-weight: normal;
   font-size: 22px;
   line-height: 27px;
   color: #FFFFFF;
-
   padding: 17px 31px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.input {
+  display: block;
+  width: 100%;
+  height: 53px;
+  padding: 0 20px;
+  border: 0;
+  background-color: #fff;
+}
+
+.select.ng-select {
+  &.ng-select-single {
+    .ng-select-container {
+      height: 53px;
+      border: 0;
+      border-radius: 0;
+      box-shadow: none !important;
+    }
+    .ng-value-container {
+      .ng-input {
+        top: auto;
+      }
+    }
+  }
+
+  .ng-select-container {
+    position: relative;
+  }
+
+  .ng-value-container {
+    height: 100%;
+
+    .ng-input {
+      height: 100%;
+
+      &>input {
+        height: 100%;
+      }
+    }
+  }
+  .ng-arrow-wrapper {
+    display: block;
+    width: auto;
+    height: auto;
+    padding: 0;
+    right: 10px;
+
+    .ng-arrow {
+      display: block;
+      top: auto;
+      width: 24px;
+      height: 17px;
+      background-image: url("/assets/images/icons/icon-select.svg");
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      border: 0;
+    }
+  }
+  .ng-clear-wrapper {
+    display: none;
+  }
 }

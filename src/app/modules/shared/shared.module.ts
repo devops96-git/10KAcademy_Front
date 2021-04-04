@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { L10nTranslationModule } from 'angular-l10n';
+import { NgSelectModule } from '@ng-select/ng-select';
 
 
 
@@ -11,7 +12,10 @@ import { L10nTranslationModule } from 'angular-l10n';
     CommonModule
   ],
   exports: [
-    L10nTranslationModule
+    FormsModule,
+    ReactiveFormsModule,
+    L10nTranslationModule,
+    NgSelectModule
   ]
 })
 export class SharedModule { }
