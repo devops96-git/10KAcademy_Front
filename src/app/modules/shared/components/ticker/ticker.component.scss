@@ -1,0 +1,18 @@
+.ticker {
+  overflow: hidden;
+
+  &__line {
+    white-space: nowrap;
+    animation: move-line 20s linear infinite;
+  }
+}
+
+@keyframes move-line {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}

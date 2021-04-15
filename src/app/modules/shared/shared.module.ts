@@ -3,11 +3,14 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { L10nTranslationModule } from 'angular-l10n';
 import { NgSelectModule } from '@ng-select/ng-select';
+import { TickerComponent } from './components/ticker/ticker.component';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    TickerComponent
+  ],
   imports: [
     CommonModule
   ],
@@ -15,7 +18,8 @@ import { NgSelectModule } from '@ng-select/ng-select';
     FormsModule,
     ReactiveFormsModule,
     L10nTranslationModule,
-    NgSelectModule
+    NgSelectModule,
+    TickerComponent
   ]
 })
 export class SharedModule { }
